@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://cn3hai13dmgep"]
+
+[ext_resource type="Script" uid="uid://bfuv5o4dms72w" path="res://gd/board.gd" id="1_585rg"]
+[ext_resource type="PackedScene" path="res://tscn/turn_label.tscn" id="2"]
+
+[node name="board" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_585rg")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 20.0
+offset_bottom = -20.0
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="TurnLabel" parent="CanvasLayer/VBoxContainer" instance=ExtResource("2")]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="grid" type="GridContainer" parent="CanvasLayer/VBoxContainer/CenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 8

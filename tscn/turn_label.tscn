@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://turn_label"]
+
+[ext_resource type="Script" path="res://gd/turn_label.gd" id="1"]
+
+[node name="TurnLabel" type="Label"]
+anchor_right = 1.0
+anchor_bottom = 0.0
+offset_top = 20.0
+offset_bottom = 50.0
+text = "White's turn"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1")
